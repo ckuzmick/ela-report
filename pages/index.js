@@ -28,7 +28,7 @@ export default function Home() {
               </div>
               <div className='back'>
                 <h1>The Cotton Club</h1>
-                <p>etc.etc.etc.</p>
+                <p>The Cotton Club featured entertainers such as Count Basie, Duke Ellington, and Louis Armstrong. It was previously used to sell beer during the prohibition era, before in 1935 opening for black customers in 1935, and being shut down in 1940. </p>
               </div>
             </div>
           </div>
