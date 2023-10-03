@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>Create Next App</title>
+        <title>The Harlem Renaissance</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -81,6 +81,7 @@ export default function Home() {
           position: relative;
           transition: transform 1500ms;
           transform-style: preserve-3d;
+          float: left
         }
         .card1 {
           width: 400px;
