@@ -1,107 +1,115 @@
 import Head from 'next/head';
-import styles from '../styles/Home.module.css';
+import Image from 'next/image'
+import { useState } from 'react';
+
 
 export default function Home() {
   return (
-    <div className={styles.container}>
+    <div>
       <Head>
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing <code>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/canary/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+        <div className='card-grid'>
+          <div className='card1'>
+            <div className='card-1'>
+              <div className='front'>
+                <Image
+                  src="/photo-1.png"
+                  width={800/2}
+                  height={500/2}
+                  alt="Picture of the author"
+                  style={{
+                    borderRadius: "2rem"
+                  }}
+                />
+              </div>
+              <div className='back'>
+                <h1>The Cotton Club</h1>
+                <p>etc.etc.etc.</p>
+              </div>
+            </div>
+          </div>
+          <div className='card1'>
+            <div className='card-1'>
+              <div className='front'>
+                <Image
+                  src="/photo-2.png"
+                  width={800/2}
+                  height={500/2}
+                  alt="Picture of the author"
+                  style={{
+                    borderRadius: "2rem"
+                  }}
+                />
+              </div>
+              <div className='back'>
+                <h1>Louis Armstrong</h1>
+                <p>etc.etc.etc.</p>
+              </div>
+            </div>
+          </div>
         </div>
+        
       </main>
 
-      <footer>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel" className={styles.logo} />
-        </a>
-      </footer>
-
       <style jsx>{`
+        * {
+          box-sizing: border-box;
+        }
         main {
-          padding: 5rem 0;
-          flex: 1;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
+          display: inline-flex;
+          flex-direction: row;
         }
-        footer {
+        .front, 
+        .back {
+          height: 100%;
           width: 100%;
-          height: 100px;
-          border-top: 1px solid #eaeaea;
-          display: flex;
-          justify-content: center;
-          align-items: center;
+          border-radius: 2rem;
+          position: absolute;
+          backface-visibility: hidden;
         }
-        footer img {
-          margin-left: 0.5rem;
+        .card1:hover > .card-1 {
+          cursor: pointer;
+          transform: rotateY(180deg);
         }
-        footer a {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          text-decoration: none;
-          color: inherit;
+        .card-1 {
+          width: 100%;
+          height: 100%;
+          position: relative;
+          transition: transform 1500ms;
+          transform-style: preserve-3d;
         }
-        code {
-          background: #fafafa;
-          border-radius: 5px;
-          padding: 0.75rem;
-          font-size: 1.1rem;
-          font-family:
-            Menlo,
-            Monaco,
-            Lucida Console,
-            Liberation Mono,
-            DejaVu Sans Mono,
-            Bitstream Vera Sans Mono,
-            Courier New,
-            monospace;
+        .card1 {
+          width: 400px;
+          height: 250px;
+          perspective: 800px;
+          margin:10px
         }
+        .back {
+          background-color: #F1F1F1;
+          transform: rotateY(180deg);
+          padding: 20px
+        }
+        .card-grid {
+          width: 350px;
+          height: 500px;
+          perspective: 800px;
+          margin: 10px
+        }
+        Image {
+          border-radius: 2rem;
+        }
+        h1 , p {
+          margin: 0;
+        }
+        p {
+          margin-top: 5px;
+        }
+        
+        
       `}</style>
 
       <style jsx global>{`
