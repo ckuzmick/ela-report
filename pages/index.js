@@ -81,13 +81,13 @@ export default function Home() {
           position: relative;
           transition: transform 1500ms;
           transform-style: preserve-3d;
-          float: left
         }
         .card1 {
           width: 400px;
           height: 250px;
-          perspective: 800px;
-          margin:10px
+          perspective: 1000px;
+          margin: 10px;
+          float: left;
         }
         .back {
           background-color: #F1F1F1;
@@ -95,9 +95,9 @@ export default function Home() {
           padding: 20px
         }
         .card-grid {
-          width: 350px;
+          width: 100%;
           height: 500px;
-          perspective: 800px;
+          perspective: 5000px;
           margin: 10px
         }
         Image {
@@ -108,6 +108,7 @@ export default function Home() {
         }
         p {
           margin-top: 5px;
+          line-height: 21px;
         }
         
         
