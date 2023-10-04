@@ -12,6 +12,7 @@ export default function Home() {
       </Head>
 
       <main>
+        <h2>The Harlem Renaissance</h2>
         <div className='card-grid'>
           <div className='card1'>
             <div className='card-1'>
@@ -20,7 +21,7 @@ export default function Home() {
                   src="/photo-1.png"
                   width={800/2}
                   height={500/2}
-                  alt="Picture of the author"
+                  alt="Picture of the Cotton Clubr"
                   style={{
                     borderRadius: "2rem"
                   }}
@@ -39,15 +40,15 @@ export default function Home() {
                   src="/photo-2.png"
                   width={800/2}
                   height={500/2}
-                  alt="Picture of the author"
+                  alt="Picture of Duke Ellington"
                   style={{
                     borderRadius: "2rem"
                   }}
                 />
               </div>
               <div className='back'>
-                <h1>Louis Armstrong</h1>
-                <p>etc.etc.etc.</p>
+                <h1>Duke Ellington</h1>
+                <p>After starting off in Washington D.C., Ellington made it big in New York City by perfroming in the previously mentioned Cotton Club along with his orchestra. He was an extremely talented jazz composer, condidered by many to be one of the msot important to the genre.</p>
               </div>
             </div>
           </div>
@@ -60,8 +61,9 @@ export default function Home() {
           box-sizing: border-box;
         }
         main {
-          display: inline-flex;
-          flex-direction: row;
+          background-color: black;
+          width: 100vw;
+          height: 100vh;
         }
         .front, 
         .back {
@@ -86,8 +88,8 @@ export default function Home() {
           width: 400px;
           height: 250px;
           perspective: 1000px;
-          margin: 10px;
-          float: left;
+          margin: 20px;
+          display: inline-block;
         }
         .back {
           background-color: #F1F1F1;
@@ -96,9 +98,9 @@ export default function Home() {
         }
         .card-grid {
           width: 100%;
-          height: 500px;
+          height: 100%;
           perspective: 5000px;
-          margin: 10px
+          text-align: center;
         }
         Image {
           border-radius: 2rem;
@@ -109,6 +111,13 @@ export default function Home() {
         p {
           margin-top: 5px;
           line-height: 21px;
+        }
+        h2 {
+          margin: 0;
+          padding: 20px;
+          padding-bottom: 0;
+          color: white;
+          font-size: 40px;
         }
         
         
