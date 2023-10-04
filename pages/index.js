@@ -52,6 +52,44 @@ export default function Home() {
               </div>
             </div>
           </div>
+          <div className='card1'>
+            <div className='card-1'>
+              <div className='front'>
+                <Image
+                  src="/photo-3.png"
+                  width={800/2}
+                  height={500/2}
+                  alt="Picture of Langston Hughes"
+                  style={{
+                    borderRadius: "2rem"
+                  }}
+                />
+              </div>
+              <div className='back'>
+                <h1>Langston Hughes</h1>
+                <p>Moving to Harlem in 1926 at the age of 25, Hughes made a name for himself as a poet, and also wrote nonfiction works, short stories, newspapaer columns for The Chicago Defender, and even wrote plays at times.</p>
+              </div>
+            </div>
+          </div>
+          <div className='card1'>
+            <div className='card-1'>
+              <div className='front'>
+                <Image
+                  src="/photo-4.png"
+                  width={800/2}
+                  height={500/2}
+                  alt="Picture of W.E.B. Du Bois"
+                  style={{
+                    borderRadius: "2rem"
+                  }}
+                />
+              </div>
+              <div className='back'>
+                <h1>W.E.B. Du Bois</h1>
+                <p>After he founded and edited The Crisis, an extremely popular publication linked to the NAACP</p>
+              </div>
+            </div>
+          </div>
         </div>
         
       </main>
@@ -83,12 +121,13 @@ export default function Home() {
           position: relative;
           transition: transform 1500ms;
           transform-style: preserve-3d;
+          text-align: left;
         }
         .card1 {
           width: 400px;
           height: 250px;
           perspective: 1000px;
-          margin: 20px;
+          margin: 10px;
           display: inline-block;
         }
         .back {
@@ -98,9 +137,9 @@ export default function Home() {
         }
         .card-grid {
           width: 100%;
-          height: 100%;
           perspective: 5000px;
           text-align: center;
+          padding: 10px;
         }
         Image {
           border-radius: 2rem;
